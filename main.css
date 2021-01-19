@@ -1,0 +1,388 @@
+*{
+    margin: 0;
+    padding: 0;       
+    list-style: none;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    position: fixed;  
+    top: 0px;
+    background: grey;
+    height: 80px;
+    width: 100%; 
+    z-index: 99;     
+}
+
+labels{
+    color: lightskyblue;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0px 100px;
+    font-weight: bold;   
+}
+
+footer .main-content .left .n-footer{
+    color: lightskyblue;
+    font-weight: bold;
+}
+
+footer .main-content .left .n-footer span{
+    color: white;
+}
+
+.main-content .center{
+    margin-right: 20%;
+}
+
+nav ul{    
+    float: right;
+    /* margin-right: 20px; */
+}
+
+nav ul .D-D{
+    margin-top: 20px;
+}
+
+nav ul li{      
+    display: inline-block;
+    /* margin: 20px 5px;     */
+    list-style: none;    
+    position: relative;
+}
+
+nav ul li a{
+    display: block;
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    margin-right: 20px;
+}
+
+nav ul li ul{
+    display: none;
+    position: absolute;   
+    background: grey; 
+    padding: 10px;
+    border-radius: 0px 0px 4px 4px;
+}
+
+nav ul li:hover ul{
+    display: block;
+}
+
+nav ul li ul li{
+    width: 220px;
+    border-radius: 4px;
+}
+
+nav ul li ul li a{
+    padding: 8px 14px;
+}
+
+nav ul li ul li a:hover{
+    background: #f3f3f3;
+}
+
+a:hover{
+    background: #1b9bff;
+    transition: 0.5s;    
+}
+
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    color: white;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 767px){
+    labels{
+        font-size: 15px;
+        padding-left: 10px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 520px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;         
+        text-align: center;
+        transition: all .5s;
+        z-index: 99;
+    }
+
+    nav ul li{        
+        position: relative;
+        /* margin: 30px 0; */
+        line-height: 30px;        
+    }
+    
+    a:hover, a.active{
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked ~ ul{
+        left: 0;        
+    }
+    
+    nav ul li ul{
+        top: 10px;       
+        display: none;       
+        margin: 15px 0px;
+        background: none;
+        width: 200px;
+        height: 70vh;        
+    }
+
+    nav ul li ul li{
+        font-family: cursive;
+        font-size: 7px;
+        background: none;
+        text-align: left;
+    }
+
+    nav ul li ul li a:hover{
+        background: none;
+        color: red;
+        text-align: center;
+    }
+    
+    nav ul li:hover ul{
+        display: block;
+    }
+    
+}
+
+
+
+.footer-bottom{
+    background-color:black;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;    
+}
+
+.footer-bottom span{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-weight: 200px;
+}
+
+.footer-bottom p{
+    color: white;
+}
+
+
+
+footer{
+    position: relative;
+    display: inline-block;
+    bottom: 0px;
+    width: 100%;
+    background:grey;    
+}
+
+.main-content{
+    display: flex;    
+}
+
+.main-content .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.box h2{
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+
+.box .content{
+    margin: 20px 0 0 0;
+}
+
+.left .content .social{
+    margin-left: auto; 
+    display: flex;
+}
+
+.left .content .social a{
+   padding: 0 2px;
+   color: white;   
+}
+
+.left .content .social li{
+    list-style: none;
+    text-decoration: none;
+}
+
+.left .content .social a span{
+    height: 30px;
+    width: 30px;
+    background: #1a1a1a;
+    line-height: 30px;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 5px;
+}
+
+.left .content .social a span:hover{
+    background: red;
+}
+
+.banner{
+    width: 80%;
+    height: 400px;
+    /* margin-top: 30px; */
+    top: 90px;    
+    left: 10%;    
+    position: relative;
+    background-size: 100% 100%;
+    background-image: url('./images/img1.jpeg');
+    box-shadow: 1px 2px 10px black;
+    animation: slider 96s infinite alternate;
+}
+
+@keyframes slider{
+    8.3%{background-image: url('./images/img2.jpeg');}
+    16.3%{background-image: url('./images/img3.jpeg');}
+    24.3%{background-image: url('./images/img4.jpeg');}
+    32.3%{background-image: url('./images/img5.jpg');}
+    40.3%{background-image: url('./images/img6.jpeg');}
+    48.3%{background-image: url('./images/img7.jpeg');}
+    56.3%{background-image: url('./images/img8.jpeg');}
+    64.3%{background-image: url('./images/img9.jpeg');}
+    72.3%{background-image: url('./images/img10.jpeg');}
+    80.3%{background-image: url('./images/img11.jpeg');}
+    88.3%{background-image: url('./images/img12.jpeg');}
+}
+
+.content{
+   margin-top: auto;
+   margin-left: 10px;
+   margin-right:10px ;
+   }
+
+.top-nav .logo a{
+    margin-left: 20px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    color: lightskyblue
+}
+
+.top-nav .logo a span{
+    font-size: 20px;
+}
+
+.top-nav .logo a span1{
+    color: white;
+}
+
+p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.img1{
+    width: 40%;
+    height: 300px;
+    margin-left: 15px;
+
+}
+
+.div1{
+    width: 100%;
+    height: auto;
+    float: left;
+    display: flex; 
+    padding-bottom: 20px;  
+}
+
+.marq{
+    margin-top: 100px; 
+    margin-bottom: 40px;    
+    color: blue;
+}
+
+h6{
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+.projects h3, h5{
+    font-family: cursive;    
+}
+
+.projects {
+    padding-left: 5%; 
+}
+
+.projects h3{   
+    padding-bottom: 20px;
+}
+
+.contact-part-intro h3{
+    font-family: cursive;
+    padding-left: 100px;
+    margin-bottom: 20px;
+}
+
+.add{
+    padding-left: 10%;
+    padding-bottom: 20px;
+}
+
+/* //about; */
+
+table{
+    width: 40%;
+    margin-left: 8%;
+    margin-bottom: 2%;
+}
+
+th{
+    text-align: left;
+}
+
+.about p{
+    padding-left: 4%;
+}
+
+.about h3{
+    padding-left: 5%;
+    font-family: cursive;
+}
